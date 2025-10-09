@@ -1,0 +1,3 @@
+- Data raw:   original, untouched data 
+- Data interim:   cleaned and organized data (drop columns, change names, drop na)
+- Data processed:   data modified in order to be ready to use by the models (normalization, drop meaningful columns but not used by the models)
