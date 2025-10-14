@@ -1,0 +1,10 @@
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  models: models
+  reports: reports
+
+features:
+  predictors: ["granular1", "granular2", "granular3", "granular4", "granular5"]   
+  target: ["agg1", "agg2"]                
