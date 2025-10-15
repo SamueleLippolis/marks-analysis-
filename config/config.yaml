@@ -2,9 +2,14 @@ paths:
   raw: data/raw
   interim: data/interim
   processed: data/processed
-  models: models
   reports: reports
+  experiments: reports/experiments
 
 features:
   predictors: ["granular1", "granular2", "granular3", "granular4", "granular5"]   
-  target: ["agg1", "agg2"]                
+  target: ["aggregated1", "aggregated2"]                
+  
+split:
+  shuffle: True 
+  test_size: 0.2
+  random_state: 0
