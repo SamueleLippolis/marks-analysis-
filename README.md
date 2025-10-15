@@ -2,13 +2,13 @@
 I use some ML models to analyse school marks and set a proper github repo. 
 
 # How to use 
-Write the following thin on terminal in the folder
+Write the following lines on terminal in the folder
 - conda activate ENVNAME   (activate your py env)
 - export PYTHONPATH=$PWD   (set your python env in the folder)
 - python scripts/prepare_data (from raw_data, it builds interim_data and processed_data)
 - python scripts/explore_interim (build figures regarding interim_data)
-- python script/train_meanModel (eval and generate figures about meanModel)
-- python script/train_lr (train, eval and generate figures regarding linear_regression_model) 
+- python scripts/train_meanModel (eval and generate figures about meanModel)
+- python scripts/train_lr (train, eval and generate figures regarding linear_regression_model) 
 
 # Folder explanation
 - config (config file)
