@@ -3,7 +3,7 @@ import pandas as pd
 from src.utils.io import load_cfg, ensure_dir
 
 # interim to processed  
-def run_build_features(cfg):
+def run_build_processed_ds(cfg):
     # Set
     interim_dir = Path(cfg['paths']['interim']) 
     df = pd.read_csv(f'{interim_dir}/clean_ds.csv')

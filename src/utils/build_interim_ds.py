@@ -3,7 +3,7 @@ import pandas as pd
 from src.utils.io import ensure_dir
 
 # raw to interim
-def run_make_ds(cfg):
+def run_build_interim_ds(cfg):
     # Set and import 
     raw_dir = Path(cfg["paths"]["raw"])
     df = pd.read_csv(raw_dir / "ds.csv")

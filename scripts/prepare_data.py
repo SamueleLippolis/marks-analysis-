@@ -1,6 +1,6 @@
 from src.utils.io import load_cfg
-from src.data.make_ds import run_make_ds
-from src.data.build_features import run_build_features
+from src.utils.build_interim_ds import run_build_interim_ds
+from src.utils.build_processed_ds import run_build_processed_ds
 
 if __name__ == '__main__':
     cfg = load_cfg()
