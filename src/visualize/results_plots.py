@@ -39,3 +39,24 @@ def plot_multi_target_points(y_true, y_pred, ylim = [0,10], outpath: Path = None
         outpath.parent.mkdir(parents=True, exist_ok=True)
         plt.savefig(outpath, dpi=150)
     plt.close()   # don't show in non-interactive scripts
+
+
+def plot_learning_curves(history, outpath: Path, title: str = "Learning curves"):
+    """
+    history: object or dict with 'train_loss' and 'test_loss' lists (same length).
+    """
+    tr = history.train_loss if hasattr(history, "train_loss") else history["train_loss"]
+    te = history.test_loss  if hasattr(history, "test_loss")  else history["test_loss"]
+
+    outpath.parent.mkdir(parents=True, exist_ok=True)
+    plt.figure()
+    plt.plot(tr, label="train (per 10 epochs)")
+    plt.plot(te, label="test (per 10 epochs)")
+    plt.xlabel("Checkpoint index (every 10 epochs)")
+    plt.ylabel("Loss (MSE)")
+    plt.title(title)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(outpath, dpi=150)
+    plt.close()
+
